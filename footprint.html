@@ -3,7 +3,7 @@
   <head>
       <meta charset="utf-8" />
       <title>footprint</title>
-      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(197, 200, 198); overflow: auto; background-color: rgb(29, 31, 33); }
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); overflow: auto; background-color: rgb(40, 44, 52); }
 .markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
 .markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
 .markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
@@ -13,19 +13,19 @@
 .markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
 .markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
 .markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
-.markdown-preview:not([data-use-github-style]) del { color: rgb(155, 160, 157); }
-.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
 .markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
 .markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
 .markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
-.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(155, 160, 157); border-color: rgb(67, 72, 76); border-width: 4px; }
-.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(67, 72, 76); background: none; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(75, 83, 98); background: none; }
 .markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
 .markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
-.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(67, 72, 76); }
-.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(48, 51, 55); }
-.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(39, 41, 44); }
-.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(67, 72, 76) rgb(67, 72, 76) rgb(53, 57, 60); background-color: rgb(48, 51, 55); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); background-color: rgb(58, 63, 75); }
 .markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
 .markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
 .markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
@@ -100,7 +100,6 @@
 .markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
 .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
 .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
-.markdown-preview code { text-shadow: none; }
 .bracket-matcher .region {
   border-bottom: 1px dotted lime;
   position: absolute;
@@ -112,32 +111,73 @@
 
 pre.editor-colors,
 .host {
-  background-color: #1d1f21;
-  color: #c5c8c6;
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line,
+.host .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region,
+.host .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
 }
 pre.editor-colors .invisible-character,
 .host .invisible-character {
-  color: rgba(197, 200, 198, 0.2);
+  color: rgba(171, 178, 191, 0.15);
 }
 pre.editor-colors .indent-guide,
 .host .indent-guide {
-  color: rgba(197, 200, 198, 0.2);
+  color: rgba(171, 178, 191, 0.15);
 }
 pre.editor-colors .wrap-guide,
 .host .wrap-guide {
-  background-color: rgba(197, 200, 198, 0.1);
+  background-color: rgba(171, 178, 191, 0.15);
 }
-pre.editor-colors .gutter,
-.host .gutter {
-  background-color: #292c2f;
+pre.editor-colors .gutter .line-number,
+.host .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
 }
-pre.editor-colors .gutter .cursor-line,
-.host .gutter .cursor-line {
-  background-color: rgba(255, 255, 255, 0.14);
+pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #2c313a;
 }
-pre.editor-colors .line-number.cursor-line-no-selection,
-.host .line-number.cursor-line-no-selection {
-  background-color: rgba(255, 255, 255, 0.14);
+pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right,
+.host .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before,
+.host .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after,
+.host .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
 }
 pre.editor-colors .gutter .line-number.folded,
 .host .gutter .line-number.folded,
@@ -145,253 +185,295 @@ pre.editor-colors .gutter .line-number:after,
 .host .gutter .line-number:after,
 pre.editor-colors .fold-marker:after,
 .host .fold-marker:after {
-  color: #fba0e3;
-}
-pre.editor-colors .invisible,
-.host .invisible {
-  color: #c5c8c6;
-}
-pre.editor-colors .cursor,
-.host .cursor {
-  border-color: #ffffff;
-}
-pre.editor-colors .selection .region,
-.host .selection .region {
-  background-color: #444444;
-}
-pre.editor-colors .source.gfm,
-.host .source.gfm {
-  color: #999;
-}
-pre.editor-colors .gfm .markup.heading,
-.host .gfm .markup.heading {
-  color: #eee;
-}
-pre.editor-colors .gfm .link,
-.host .gfm .link {
-  color: #555;
-}
-pre.editor-colors .gfm .variable.list,
-.host .gfm .variable.list,
-pre.editor-colors .gfm .support.quote,
-.host .gfm .support.quote {
-  color: #555;
-}
-pre.editor-colors .gfm .link .entity,
-.host .gfm .link .entity {
-  color: #ddd;
-}
-pre.editor-colors .gfm .raw,
-.host .gfm .raw {
-  color: #aaa;
-}
-pre.editor-colors .markdown .paragraph,
-.host .markdown .paragraph {
-  color: #999;
-}
-pre.editor-colors .markdown .heading,
-.host .markdown .heading {
-  color: #eee;
-}
-pre.editor-colors .markdown .raw,
-.host .markdown .raw {
-  color: #aaa;
-}
-pre.editor-colors .markdown .link,
-.host .markdown .link {
-  color: #555;
-}
-pre.editor-colors .markdown .link .string,
-.host .markdown .link .string {
-  color: #555;
-}
-pre.editor-colors .markdown .link .string.title,
-.host .markdown .link .string.title {
-  color: #ddd;
-}
-.bracket-matcher .region {
-  border-bottom: 1px solid #f8de7e;
-  margin-top: -1px;
-  opacity: .7;
+  color: #abb2bf;
 }
 .comment {
-  color: #7C7C7C;
+  color: #5c6370;
+  font-style: italic;
 }
-.entity {
-  color: #FFD2A7;
+.comment .markup.link {
+  color: #5c6370;
 }
 .entity.name.type {
-  text-decoration: underline;
-  color: #FFFFB6;
+  color: #e5c07b;
 }
 .entity.other.inherited-class {
-  color: #9B5C2E;
+  color: #98c379;
 }
 .keyword {
-  color: #96CBFE;
+  color: #c678dd;
 }
 .keyword.control {
-  color: #96CBFE;
+  color: #c678dd;
 }
 .keyword.operator {
-  color: #EDEDED;
+  color: #abb2bf;
+}
+.keyword.other.special-method {
+  color: #61afef;
+}
+.keyword.other.unit {
+  color: #d19a66;
 }
 .storage {
-  color: #CFCB90;
+  color: #c678dd;
 }
-.storage.modifier {
-  color: #96CBFE;
+.storage.type.annotation,
+.storage.type.primitive {
+  color: #c678dd;
+}
+.storage.modifier.package,
+.storage.modifier.import {
+  color: #abb2bf;
 }
 .constant {
-  color: #99CC99;
+  color: #d19a66;
+}
+.constant.variable {
+  color: #d19a66;
+}
+.constant.character.escape {
+  color: #56b6c2;
 }
 .constant.numeric {
-  color: #FF73FD;
+  color: #d19a66;
+}
+.constant.other.color {
+  color: #56b6c2;
+}
+.constant.other.symbol {
+  color: #56b6c2;
 }
 .variable {
-  color: #C6C5FE;
+  color: #e06c75;
 }
-.invalid.deprecated {
-  text-decoration: underline;
-  color: #FD5FF1;
+.variable.interpolation {
+  color: #be5046;
 }
-.invalid.illegal {
-  color: #FD5FF1;
-  background-color: rgba(86, 45, 86, 0.75);
-}
-.string .source,
-.string .meta.embedded.line {
-  color: #EDEDED;
-}
-.string .punctuation.section.embedded {
-  color: #00A0A0;
-}
-.string .punctuation.section.embedded .source {
-  color: #00A0A0;
+.variable.parameter {
+  color: #abb2bf;
 }
 .string {
-  color: #A8FF60;
-}
-.string .constant {
-  color: #00A0A0;
+  color: #98c379;
 }
 .string.regexp {
-  color: #E9C062;
+  color: #56b6c2;
 }
-.string.regexp .constant.character.escape,
-.string.regexp .source.ruby.embedded,
-.string.regexp .string.regexp.arbitrary-repetition {
-  color: #FF8000;
+.string.regexp .source.ruby.embedded {
+  color: #e5c07b;
 }
-.string.regexp.group {
-  color: #C6A24F;
-  background-color: rgba(255, 255, 255, 0.06);
+.string.other.link {
+  color: #e06c75;
 }
-.string.regexp.character-class {
-  color: #B18A3D;
+.punctuation.definition.comment {
+  color: #5c6370;
 }
-.string .variable {
-  color: #8A9A95;
+.punctuation.definition.method-parameters,
+.punctuation.definition.function-parameters,
+.punctuation.definition.parameters,
+.punctuation.definition.separator,
+.punctuation.definition.seperator,
+.punctuation.definition.array {
+  color: #abb2bf;
 }
-.support {
-  color: #FFFFB6;
+.punctuation.definition.heading,
+.punctuation.definition.identity {
+  color: #61afef;
+}
+.punctuation.definition.bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.punctuation.definition.italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.punctuation.section.embedded {
+  color: #be5046;
+}
+.punctuation.section.method,
+.punctuation.section.class,
+.punctuation.section.inner-class {
+  color: #abb2bf;
+}
+.support.class {
+  color: #e5c07b;
+}
+.support.type {
+  color: #56b6c2;
 }
 .support.function {
-  color: #DAD085;
+  color: #56b6c2;
 }
-.support.constant {
-  color: #FFD2A7;
+.support.function.any-method {
+  color: #61afef;
 }
-.support.type.property-name.css {
-  color: #EDEDED;
+.entity.name.function {
+  color: #61afef;
 }
-.source .entity.name.tag,
-.source .punctuation.tag {
-  color: #96CBFE;
+.entity.name.class,
+.entity.name.type.class {
+  color: #e5c07b;
 }
-.source .entity.other.attribute-name {
-  color: #C6C5FE;
+.entity.name.section {
+  color: #61afef;
+}
+.entity.name.tag {
+  color: #e06c75;
 }
 .entity.other.attribute-name {
-  color: #C6C5FE;
+  color: #d19a66;
 }
-.entity.name.tag.namespace,
-.entity.other.attribute-name.namespace {
-  color: #E18964;
+.entity.other.attribute-name.id {
+  color: #61afef;
 }
-.meta.preprocessor.c {
-  color: #8996A8;
+.meta.class {
+  color: #e5c07b;
 }
-.meta.preprocessor.c .keyword {
-  color: #AFC4DB;
+.meta.class.body {
+  color: #abb2bf;
 }
-.meta.cast {
-  color: #676767;
+.meta.method-call,
+.meta.method {
+  color: #abb2bf;
 }
-.meta.sgml.html .meta.doctype,
-.meta.sgml.html .meta.doctype .entity,
-.meta.sgml.html .meta.doctype .string,
-.meta.xml-processing,
-.meta.xml-processing .entity,
-.meta.xml-processing .string {
-  color: #494949;
+.meta.definition.variable {
+  color: #e06c75;
 }
-.meta.tag .entity,
-.meta.tag > .punctuation,
-.meta.tag.inline .entity {
-  color: #C6C5FE;
+.meta.link {
+  color: #d19a66;
 }
-.meta.tag .name,
-.meta.tag.inline .name,
-.meta.tag > .punctuation {
-  color: #96CBFE;
+.meta.require {
+  color: #61afef;
 }
-.meta.selector.css .entity.name.tag {
-  text-decoration: underline;
-  color: #96CBFE;
-}
-.meta.selector.css .entity.other.attribute-name.tag.pseudo-class {
-  color: #8F9D6A;
-}
-.meta.selector.css .entity.other.attribute-name.id {
-  color: #8B98AB;
-}
-.meta.selector.css .entity.other.attribute-name.class {
-  color: #62B1FE;
-}
-.meta.property-group .support.constant.property-value.css,
-.meta.property-value .support.constant.property-value.css {
-  color: #F9EE98;
-}
-.meta.preprocessor.at-rule .keyword.control.at-rule {
-  color: #8693A5;
-}
-.meta.property-value .support.constant.named-color.css,
-.meta.property-value .constant {
-  color: #87C38A;
-}
-.meta.constructor.argument.css {
-  color: #8F9D6A;
-}
-.meta.diff,
-.meta.diff.header {
-  color: #F8F8F8;
-  background-color: #0E2231;
+.meta.selector {
+  color: #c678dd;
 }
 .meta.separator {
-  color: #60A633;
-  background-color: #242424;
+  background-color: #373b41;
+  color: #abb2bf;
 }
-.meta.line.entry.logfile,
-.meta.line.exit.logfile {
-  background-color: rgba(238, 238, 238, 0.16);
+.meta.tag {
+  color: #abb2bf;
 }
-.meta.line.error.logfile {
-  background-color: #751012;
+.underline {
+  text-decoration: underline;
+}
+.none {
+  color: #abb2bf;
+}
+.invalid.deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.invalid.illegal {
+  color: #ffffff !important;
+  background-color: #e05252 !important;
+}
+.markup.bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.markup.changed {
+  color: #c678dd;
+}
+.markup.deleted {
+  color: #e06c75;
+}
+.markup.italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.markup.heading {
+  color: #e06c75;
+}
+.markup.heading .punctuation.definition.heading {
+  color: #61afef;
+}
+.markup.link {
+  color: #c678dd;
+}
+.markup.inserted {
+  color: #98c379;
+}
+.markup.quote {
+  color: #d19a66;
+}
+.markup.raw {
+  color: #98c379;
+}
+.source.cs .keyword.operator {
+  color: #c678dd;
+}
+.source.css .property-name,
+.source.css .property-value {
+  color: #828997;
+}
+.source.css .property-name.support,
+.source.css .property-value.support {
+  color: #abb2bf;
+}
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+}
+.source.gfm .link .entity {
+  color: #61afef;
+}
+.source.ini .keyword.other.definition.ini {
+  color: #e06c75;
+}
+.source.java .storage.modifier.import {
+  color: #e5c07b;
+}
+.source.java .storage.type {
+  color: #e5c07b;
+}
+.source.java-properties .meta.key-pair {
+  color: #e06c75;
+}
+.source.java-properties .meta.key-pair > .punctuation {
+  color: #abb2bf;
+}
+.source.js .keyword.operator {
+  color: #56b6c2;
+}
+.source.js .keyword.operator.delete,
+.source.js .keyword.operator.in,
+.source.js .keyword.operator.of,
+.source.js .keyword.operator.instanceof,
+.source.js .keyword.operator.new,
+.source.js .keyword.operator.typeof,
+.source.js .keyword.operator.void {
+  color: #c678dd;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json {
+  color: #e06c75;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json > .punctuation.string {
+  color: #e06c75;
+}
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json > .punctuation,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json > .punctuation {
+  color: #98c379;
+}
+.source.json .meta.structure.dictionary.json > .constant.language.json,
+.source.json .meta.structure.array.json > .constant.language.json {
+  color: #56b6c2;
+}
+.source.ruby .constant.other.symbol > .punctuation {
+  color: inherit;
+}
+.source.python .keyword.operator.logical.python {
+  color: #c678dd;
+}
+.source.python .variable.parameter {
+  color: #d19a66;
 }
 </style>
   </head>
-  <body class='markdown-preview'><h3 id="done-">done:</h3>
+  <body class='markdown-preview' data-use-github-style><h3 id="done-">done:</h3>
 <ul>
 <li>Machine Learning, on Coursera by Andrew Ng.</li>
 <li>《机器学习基石》 on Coursera by 林轩田</li>
