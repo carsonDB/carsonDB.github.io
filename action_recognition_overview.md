@@ -74,7 +74,7 @@ Note: The motion information didn’t add all that much...
 - CNN -> feature -> RNN(LSTM)
 - 获得长期序列信息。
 - 模型更复杂，需要先后训练两个模型。
-- 实验表明3层LSTM网络效果最好。
+- 如果把CNN和RNN结合，会如何呢？
 
 <!-- slide -->
 # Problems
