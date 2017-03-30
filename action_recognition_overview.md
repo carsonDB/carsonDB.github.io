@@ -9,6 +9,21 @@ Activity recognition aims to recognize the **actions** and goals of one or more 
 - Temporal information (motion)
 
 <!-- slide -->
+# Dataset
+- UCF101 - Action Recognition Data Set.
+- HMDB51: A Large Video Database for Human Motion Recognition.
+- Sports-1M Dataset (not available)
+- Human Activity Video Datasets
+- THUMOS Challenge 2015 Action Recognition in Temporally Untrimmed Videos
+- ...
+
+<!-- slide -->
+# Intuition
+<img style='float:left' width=50% src='./pic/static_walk.jpg'>
+
+<img style='float:right' width=40% src='./pic/dots_move.gif'>
+
+<!-- slide -->
 # Optical flow
 ![](./pic/optical_flow.png)``
 $$I(x, y, t) = I(x + \Delta x, y + \Delta y, t + \Delta t)$$
@@ -23,14 +38,20 @@ Dense trajectories and motion boundary descriptors for action recognition (Wang 
 1. Large-scale Video Classification with Convolutional Neural Networks, Karpathy et al., 2014
 
 ![](./pic/spatio_temporal_convnets.jpg)
+
 <!-- slide -->
 ![](./pic/spatio_temporal_convnets_benchmark.jpg)
-
 Note: The motion information didn’t add all that much...
 
 <!-- slide -->
 2. Two-Stream Convolutional Networks for Action Recognition in Videos, Simonyan and Zisserman 2014
 ![](./pic/two_stream.jpg)
+
+<!-- slide -->
+## "Slow fusion" VS "Two-Stream"
+1. Spatio-Temporal ConvNets
+![](./pic/slow_fusion_ucf101_result.png)
+2. Two-Stream Convolutional Networks
 ![](./pic/two_stream_benchmark.jpg)
 
 <!-- slide -->
@@ -57,13 +78,16 @@ Note: The motion information didn’t add all that much...
 
 <!-- slide -->
 # Problems
-- 无法完全利用卷积神经网络学习长期的视频信息。
-- 视频数据集样本量不够大，容易过拟合，但是数据集总体体积大。
-- 大部分的模型还需要依赖光流的帮助。
+1. 无法完全利用卷积神经网络学习长期的视频信息。
+2. 视频数据集样本量不够大，容易过拟合，但是数据集总体体积大。
+3. 大部分的模型还需要依赖光流的帮助。
 
 <!-- slide -->
 # Expectation
-- 视频相邻帧存在大量的冗余，希望能降低计算复杂度，提高效果。
-- 随着硬件（特别是GPU）的发展，在不久的将来，可以有像现在这样的图片数据集（Imagenet），训练时间也可以接受。
-- 视频蕴含着比图片多很多的信息。
-- 相比于图片，视频具有某种序列，可以用在无监督式学习中的监督因素。
+1. 视频相邻帧存在大量的冗余，希望能降低计算复杂度，提高效果。
+2. 随着硬件（特别是GPU）的发展，在不久的将来，可以有像现在这样的图片数据集（Imagenet），训练时间也可以接受。
+3. 视频蕴含着比图片多很多的信息。
+4. 相比于图片，视频具有某种序列，可以用在无监督式学习中的监督因素。
+
+<!-- slide -->
+# Thank You

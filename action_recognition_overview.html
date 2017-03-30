@@ -1620,6 +1620,18 @@ body {
 <li><p>Spatial information (image)</p></li>
 <li><p>Temporal information (motion)</p></li>
 </ul>
+</section><section ><h1 id="dataset">Dataset</h1>
+<ul>
+<li><p>UCF101 - Action Recognition Data Set.</p></li>
+<li><p>HMDB51: A Large Video Database for Human Motion Recognition.</p></li>
+<li><p>Sports-1M Dataset (not available)</p></li>
+<li><p>Human Activity Video Datasets</p></li>
+<li><p>THUMOS Challenge 2015 Action Recognition in Temporally Untrimmed Videos</p></li>
+<li><p>...</p></li>
+</ul>
+</section><section ><h1 id="intuition">Intuition</h1>
+<p><img style="float:left" width="50%" src="./pic/static_walk.jpg"></p>
+<p><img style="float:right" width="40%" src="./pic/dots_move.gif"></p>
 </section><section ><h1 id="optical-flow">Optical flow</h1>
 <p><img src="./pic/optical_flow.png" alt="">``<br>
 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>I</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo separator="true">,</mo><mi>t</mi><mo>)</mo><mo>=</mo><mi>I</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>y</mi><mo separator="true">,</mo><mi>t</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">I(x, y, t) = I(x + \Delta x, y + \Delta y, t + \Delta t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mord mathit">t</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mbin">+</span><span class="mord mathrm">Δ</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mbin">+</span><span class="mord mathrm">Δ</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mord mathit">t</span><span class="mbin">+</span><span class="mord mathrm">Δ</span><span class="mord mathit">t</span><span class="mclose">)</span></span></span></span></span></p>
@@ -1631,11 +1643,17 @@ body {
 <li><p>Large-scale Video Classification with Convolutional Neural Networks, Karpathy et al., 2014</p></li>
 </ol>
 <p><img src="./pic/spatio_temporal_convnets.jpg" alt=""></p>
-</section><section ><p><img src="./pic/spatio_temporal_convnets_benchmark.jpg" alt=""></p>
-<p>Note: The motion information didn’t add all that much...</p>
+</section><section ><p><img src="./pic/spatio_temporal_convnets_benchmark.jpg" alt=""><br>
+Note: The motion information didn’t add all that much...</p>
 </section><section ><ol start="2">
 <li><p>Two-Stream Convolutional Networks for Action Recognition in Videos, Simonyan and Zisserman 2014<br>
-<img src="./pic/two_stream.jpg" alt=""><br>
+<img src="./pic/two_stream.jpg" alt=""></p></li>
+</ol>
+</section><section ><h2 id="slow-fusion-vs-two-stream">&quot;Slow fusion&quot; VS &quot;Two-Stream&quot;</h2>
+<ol>
+<li><p>Spatio-Temporal ConvNets<br>
+<img src="./pic/slow_fusion_ucf101_result.png" alt=""></p></li>
+<li><p>Two-Stream Convolutional Networks<br>
 <img src="./pic/two_stream_benchmark.jpg" alt=""></p></li>
 </ol>
 </section><section ><p><img src="./pic/two_stream_tensor.jpg" alt=""></p>
@@ -1664,18 +1682,19 @@ body {
 <li><p>实验表明3层LSTM网络效果最好。</p></li>
 </ul>
 </section><section ><h1 id="problems">Problems</h1>
-<ul>
+<ol>
 <li><p>无法完全利用卷积神经网络学习长期的视频信息。</p></li>
 <li><p>视频数据集样本量不够大，容易过拟合，但是数据集总体体积大。</p></li>
 <li><p>大部分的模型还需要依赖光流的帮助。</p></li>
-</ul>
+</ol>
 </section><section ><h1 id="expectation">Expectation</h1>
-<ul>
+<ol>
 <li><p>视频相邻帧存在大量的冗余，希望能降低计算复杂度，提高效果。</p></li>
 <li><p>随着硬件（特别是GPU）的发展，在不久的将来，可以有像现在这样的图片数据集（Imagenet），训练时间也可以接受。</p></li>
 <li><p>视频蕴含着比图片多很多的信息。</p></li>
 <li><p>相比于图片，视频具有某种序列，可以用在无监督式学习中的监督因素。</p></li>
-</ul>
+</ol>
+</section><section ><h1 id="thank-you">Thank You</h1>
 </section>
   </div>
 </div> </body> <script>
