@@ -1,3 +1,10 @@
+---
+presentation:
+  slideNumber: true
+  margin: 0.01
+  controls: false
+---
+
 <!-- slide -->
 ## Introduce three generative models from the view of video prediction.
 </br>
@@ -5,14 +12,16 @@
 
 <!-- slide -->
 #### Why generative models should be applied in video prediction?
-Uncertainty in video prediction.
+There are **uncertainties** in video prediction.
 ![](./generative_pic/uncertainty.png)
 
 <!-- slide -->
 ### Generative models
 Discriminative Models $\longrightarrow p(\mathbf{y} | \mathbf{x})$
+Models are fed with $\mathbf{x}$, and supposed to produce $\mathbf{y}$ with high probability.
 
 Generative Models $\longrightarrow p(\mathbf{y} , \mathbf{x})$ or $p(\mathbf{x})$.
+Models are supposed to model real data $p(\mathbf{y} , \mathbf{x})$ or $p(\mathbf{x})$ distributions.
 </br>
 <blockquote class="Blockquote--large">
 <p>“What I cannot create, I do not understand.”</p>
@@ -20,18 +29,24 @@ Generative Models $\longrightarrow p(\mathbf{y} , \mathbf{x})$ or $p(\mathbf{x})
 </blockquote>
 
 <!-- slide -->
-- ### Generative Adversarial Network.
-- ### Variable Autoencoder.
-- ### PixelRNN / PixelCNN (Autoregressive Network).
+- ### Generative Adversarial Network
+- ### Variable Autoencoder
+- ### PixelRNN / PixelCNN (Autoregressive Network)
 
 Papers:
-- Generating videos with scene dynamics.
-- An Uncertain Future: Forecasting from Static Images using Variational Autoencoders.
-- Video Pixel Networks.
+- Carl Vondrick, Hamed Pirsiavash, Antonio Torralba. "Generating videos with scene dynamics", in NIPS 2016.
+- Jacob Walker, Carl Doersch, Abhinav Gupta, Martial Hebert. "An Uncertain Future: Forecasting from Static Images using Variational Autoencoders", in ECCV 2016.
+- Nal Kalchbrenner, Aaron van den Oord, Karen Simonyan, Ivo Danihelka, Oriol Vinyals, Alex Graves, Koray Kavukcuoglu. "Video Pixel Networks", Arxiv, 2016.
 
 <!-- slide -->
-### GAN generates 32 frames at a time.
+### GAN (conceptual)
+![](./generative_pic/gan_structure.png)
+A typical gan model consists of generator and discriminator.
+
+<!-- slide -->
+### Generator part of VideoGAN.
 ![](./generative_pic/gan_network.png)
+This generator can produce 32 frames at a time. Efficient!
 
 <!-- slide -->
 ### Selected generated clips
@@ -74,20 +89,25 @@ Papers:
 - Can’t solve inference queries such as p(x), p(z|x).
 
 <!-- slide -->
-Different distance metrics used by different models.
 ![](generative_pic/three_distance_effects.png)
-Paper: A NOTE ON THE EVALUATION OF GENERATIVE MODELS.
+##### GAN belongs to the last one (JSD), while VAE and PixelRNN (PixelCNN) related to the second one (KLD).
+
+Lucas Theis, Aäron van den Oord, Matthias Bethge. "A note on the evaluation of generative models", in ICLR 2016.
 
 <!-- slide -->
 ### Variable Autoencoders
 <table>
+<tr>
+  <td align='middle'>Autoencoder</td>
+  <td align='middle'>Encoder of VAE</td>
+</tr>
 <tr>
 <td><img src='generative_pic/autoencoder.png'></td>
 <td><img src='generative_pic/vae_encoder.png'></td>
 </tr>
 </table>
 
-Paper: Auto-Encoding Variational Bayes.
+Diederik P Kingma, Max Welling. "Auto-Encoding Variational Bayes", in ICLR 2014.
 
 <!-- slide -->
 ### Maximize lower bound
@@ -101,8 +121,10 @@ z = \mu + L\varepsilon, \varepsilon \sim \mathcal{N}(0, I)$
 <!-- slide -->
 ### Predict dense trajectory
 ![](./generative_pic/vae_DT.png)
+Jacob Walker, Carl Doersch, Abhinav Gupta, Martial Hebert. "An Uncertain Future: Forecasting from Static Images using Variational Autoencoders", in ECCV 2016.
 
 <!-- slide -->
+### Results
 ![](./generative_pic/dt_draw.png)
 
 <!-- slide -->
@@ -117,7 +139,7 @@ z = \mu + L\varepsilon, \varepsilon \sim \mathcal{N}(0, I)$
 ### Negative log-likelihood for generative models on CIFAR-10 expressed as bits per sub-pixel.
 ![](./generative_pic/pixelplusplus_results.png)
 
-Paper: PIXELCNN++: improving the pixelcnn with discretized logistic mixture likelihood and other modifications.
+Tim Salimans, Andrej Karpathy, Xi Chen, Diederik P. Kingma. "PIXELCNN++: improving the pixelcnn with discretized logistic mixture likelihood and other modifications", ICLR 2017.
 
 <!-- slide -->
 ### PixelRNN / PixelCNN
@@ -131,11 +153,13 @@ P(X) &= P(x_1,...,x_{i}) \\
 <div style='position: absolute; top: 20%; left: 60%'>
 <img src='./generative_pic/pixelcnn.png'>
 </div>
+</br>
+Model every pixel iteratively with RNN.
 
 <!-- slide -->
 ### Results in nats/frame on the Moving MNIST dataset.
 ![](./generative_pic/vpn_results.png)
-Paper: Video Pixel Networks.
+Nal Kalchbrenner, Aaron van den Oord, Karen Simonyan, Ivo Danihelka, Oriol Vinyals, Alex Graves, Koray Kavukcuoglu. "Video Pixel Networks", Arxiv, 2016.
 
 <!-- slide -->
 ### Pros:
@@ -146,4 +170,4 @@ Paper: Video Pixel Networks.
 - Sequential generation => slow.
 
 <!-- slide -->
-## Thank you.
+## Thank you
