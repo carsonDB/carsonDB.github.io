@@ -1,7 +1,7 @@
 ---
 presentation:
   slideNumber: true
-  margin: 0.01
+  #margin: 0.01
   controls: false
 ---
 
@@ -16,11 +16,11 @@ There are **uncertainties** in video prediction.
 ![](./generative_pic/uncertainty.png)
 
 <!-- slide -->
-### Generative models
+### Discriminative models and Generative models
 Discriminative Models $\longrightarrow p(\mathbf{y} | \mathbf{x})$
-Models are fed with $\mathbf{x}$, and supposed to produce $\mathbf{y}$ with high probability.
+Models are fed with $\mathbf{x}$, and supposed to produce correct $\mathbf{y}$ with high probability.
 
-Generative Models $\longrightarrow p(\mathbf{y} , \mathbf{x})$ or $p(\mathbf{x})$.
+Generative Models $\longrightarrow p(\mathbf{y} , \mathbf{x})$ or $p(\mathbf{x})$
 Models are supposed to model real data $p(\mathbf{y} , \mathbf{x})$ or $p(\mathbf{x})$ distributions.
 </br>
 <blockquote class="Blockquote--large">
@@ -40,7 +40,7 @@ Papers:
 
 <!-- slide -->
 ### GAN (conceptual)
-![](./generative_pic/gan_structure.png)
+<img width='100%' src='./generative_pic/gan_structure.png' />
 A typical gan model consists of generator and discriminator.
 
 <!-- slide -->
@@ -99,7 +99,7 @@ Lucas Theis, Aäron van den Oord, Matthias Bethge. "A note on the evaluation of 
 <table>
 <tr>
   <td align='middle'>Autoencoder</td>
-  <td align='middle'>Encoder of VAE</td>
+  <td align='middle'>Encoder of VAE (inference)</td>
 </tr>
 <tr>
 <td><img src='generative_pic/autoencoder.png'></td>
@@ -112,6 +112,7 @@ Diederik P Kingma, Max Welling. "Auto-Encoding Variational Bayes", in ICLR 2014.
 <!-- slide -->
 ### Maximize lower bound
 ![](./generative_pic/lower_bound_inference.png)
+
 <!-- slide -->
 ### Reparameterization tricks
 $z \sim \mathcal{N}(\mu,\,\Sigma) \longrightarrow
