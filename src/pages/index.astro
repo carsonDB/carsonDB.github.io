@@ -1,0 +1,39 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PostCard from "@components/PostCard.astro";
+import RepoCallout from "@components/RepoCallout.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 4);
+---
+
+<BaseLayout
+  title="CarsonDB"
+  description="Technical notes, open-source projects, and engineering writing by CarsonDB."
+>
+  <section class="container hero">
+    <div>
+      <p class="eyebrow">Personal technical blog</p>
+      <h1>Engineering notes for CogCore and long-lived experiments.</h1>
+      <p>
+        A refreshed GitHub Pages site for technical writing, project notes, and
+        deeper explanations of open-source work.
+      </p>
+      <div class="button-row">
+        <a class="button" href="/projects/cogcore/">Explore CogCore</a>
+        <a class="button secondary" href="/blog/">Read the blog</a>
+      </div>
+    </div>
+    <RepoCallout />
+  </section>
+
+  <section class="container section">
+    <h2>Latest Posts</h2>
+    <div class="post-grid">
+      {posts.map((post) => <PostCard post={post} />)}
+    </div>
+  </section>
+</BaseLayout>

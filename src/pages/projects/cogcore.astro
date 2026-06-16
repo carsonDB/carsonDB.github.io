@@ -1,0 +1,45 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="CogCore"
+  description="A writing hub for CogCore architecture, design decisions, and technical essays."
+>
+  <section class="container hero">
+    <div>
+      <p class="eyebrow">Open-source focus</p>
+      <h1>CogCore technical writing hub.</h1>
+      <p>
+        This page is ready to become the public story for CogCore: what it does,
+        why it exists, and how its internals work.
+      </p>
+      <div class="button-row">
+        <a class="button" href="https://github.com/carsonDB/cogCore">GitHub Repo</a>
+        <a class="button secondary" href="/blog/">Related Posts</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <h2>Recommended Blog Series</h2>
+    <div class="post-grid">
+      <article class="post-card">
+        <h2>Why I Built CogCore</h2>
+        <p>Explain the problem, motivation, and gap CogCore is designed to fill.</p>
+      </article>
+      <article class="post-card">
+        <h2>CogCore Architecture</h2>
+        <p>Introduce the runtime model, core abstractions, and module boundaries.</p>
+      </article>
+      <article class="post-card">
+        <h2>Tool Calling Design</h2>
+        <p>Describe how CogCore models tools, execution, retries, and safety.</p>
+      </article>
+      <article class="post-card">
+        <h2>Building Reliable AI Workflows</h2>
+        <p>Turn engineering lessons from the repo into a practical technical post.</p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
