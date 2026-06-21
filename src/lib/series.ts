@@ -4,6 +4,11 @@ export const seriesMeta = {
     description:
       "Essays on why CogCore exists, how it is shaped, and what it makes possible.",
   },
+  slide: {
+    label: "Slide Engineering Series",
+    description:
+      "Notes on presentation generation, editing, and document architecture.",
+  },
   legacy: {
     label: "Legacy Series",
     description:
@@ -24,6 +29,7 @@ export type SeriesKey = keyof typeof seriesMeta;
 
 export const seriesOrder: SeriesKey[] = [
   "cogcore",
+  "slide",
   "neuron-research",
   "legacy",
   "notes",

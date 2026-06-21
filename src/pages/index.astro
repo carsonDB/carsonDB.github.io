@@ -1,39 +1,65 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PostCard from "@components/PostCard.astro";
-import RepoCallout from "@components/RepoCallout.astro";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 4);
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
 <BaseLayout
-  title="CarsonDB"
-  description="Technical notes, open-source projects, and engineering writing by CarsonDB."
+  title="Carson Wu"
+  description="The personal blog of Carson Wu — notes on AI, software, research, and things I am learning."
 >
-  <section class="container hero">
-    <div>
-      <p class="eyebrow">Personal technical blog</p>
-      <h1>Engineering notes for CogCore and long-lived experiments.</h1>
+  <section class="container home-intro">
+    <div class="intro-copy">
+      <p class="eyebrow">Hello, I’m Carson Wu</p>
+      <h1>Notes on building, learning, and making sense of technology.</h1>
       <p>
-        A refreshed GitHub Pages site for technical writing, project notes, and
-        deeper explanations of open-source work.
+        This is my personal blog—a home for writing about AI, software,
+        research, and the ideas I want to think through in public.
       </p>
-      <div class="button-row">
-        <a class="button" href="/projects/cogcore/">Explore CogCore</a>
-        <a class="button secondary" href="/blog/">Read the blog</a>
-      </div>
     </div>
-    <RepoCallout />
+    <p class="intro-mark" aria-hidden="true">CW</p>
   </section>
 
-  <section class="container section">
-    <h2>Latest Posts</h2>
-    <div class="post-grid">
-      {posts.map((post) => <PostCard post={post} />)}
+  <section class="container posts-section" id="writing">
+    <div class="section-label">
+      <h2>Writing</h2>
+      <p>{posts.length} {posts.length === 1 ? "post" : "posts"}</p>
+    </div>
+    <div class="post-list">
+      {posts.map((post, index) => <PostCard post={post} index={index + 1} />)}
+    </div>
+  </section>
+
+  <section class="container connect-section" id="connect">
+    <div>
+      <p class="eyebrow">Connect</p>
+      <h2>Find me elsewhere.</h2>
+    </div>
+    <div class="contact-list">
+      <a href="mailto:carsonrundb@gmail.com">
+        <span>Email</span>
+        <strong>carsonrundb@gmail.com</strong>
+      </a>
+      <a href="https://github.com/carsonDB" target="_blank" rel="noreferrer">
+        <span>GitHub</span>
+        <strong>carsonDB ↗</strong>
+      </a>
+      <a href="https://x.com/Carsondb_wu" target="_blank" rel="noreferrer">
+        <span>X</span>
+        <strong>@Carsondb_wu ↗</strong>
+      </a>
+      <a
+        href="https://www.youtube.com/@countfromzero7808"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <span>YouTube</span>
+        <strong>@countfromzero7808 ↗</strong>
+      </a>
     </div>
   </section>
 </BaseLayout>

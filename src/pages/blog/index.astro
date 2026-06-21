@@ -2,58 +2,28 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PostCard from "@components/PostCard.astro";
 import { getCollection } from "astro:content";
-import { getSeriesMeta, seriesOrder } from "../../lib/series";
 
 const posts = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-
-const groupedPosts = seriesOrder
-  .map((series) => ({
-    series,
-    ...getSeriesMeta(series),
-    posts: posts
-      .filter((post) => post.data.series === series)
-      .sort((a, b) => {
-        const orderA = a.data.seriesOrder ?? Number.POSITIVE_INFINITY;
-        const orderB = b.data.seriesOrder ?? Number.POSITIVE_INFINITY;
-
-        if (orderA !== orderB) {
-          return orderA - orderB;
-        }
-
-        return b.data.date.valueOf() - a.data.date.valueOf();
-      }),
-  }))
-  .filter((group) => group.posts.length > 0);
 ---
 
-<BaseLayout title="Blog" description="Technical blog posts and legacy notes.">
-  <section class="container hero">
-    <div>
-      <p class="eyebrow">Blog</p>
-      <h1>Technical notes organized as working series.</h1>
-      <p>
-        CogCore essays, neuron research notes, and migrated legacy writing each
-        have their own shelf.
-      </p>
+<BaseLayout title="Writing" description="All writing by Carson Wu.">
+  <section class="container home-intro">
+    <div class="intro-copy">
+      <p class="eyebrow">Archive</p>
+      <h1>All writing.</h1>
+      <p>Notes on AI, software, research, and ideas in progress.</p>
     </div>
   </section>
 
-  {
-    groupedPosts.map((group) => (
-      <section class="container section series-section">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">{group.label}</p>
-            <h2>{group.label}</h2>
-          </div>
-          <p>{group.description}</p>
-        </div>
-        <div class="post-grid">
-          {group.posts.map((post) => <PostCard post={post} />)}
-        </div>
-      </section>
-    ))
-  }
+  <section class="container posts-section">
+    <div class="section-label">
+      <h2>Posts</h2>
+      <p>{posts.length} {posts.length === 1 ? "post" : "posts"}</p>
+    </div>
+    <div class="post-list">
+      {posts.map((post, index) => <PostCard post={post} index={index + 1} />)}
+    </div>
+  </section>
 </BaseLayout>

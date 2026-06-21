@@ -7,8 +7,8 @@ export async function GET(context) {
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
   return rss({
-    title: "CarsonDB Blog",
-    description: "Technical notes, open-source projects, and engineering writing.",
+    title: "Carson Wu",
+    description: "Notes on AI, software, research, and things I am learning.",
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,

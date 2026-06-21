@@ -1,14 +1,12 @@
 ---
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/blog/", label: "Blog" },
-  { href: "/projects/cogcore/", label: "CogCore" },
-  { href: "/about/", label: "About" },
+  { href: "/#writing", label: "Writing" },
+  { href: "/#connect", label: "Connect" },
 ];
 ---
 
 <header class="site-header">
-  <a class="brand" href="/">CarsonDB</a>
+  <a class="brand" href="/" aria-label="Carson Wu, home">Carson Wu</a>
   <nav aria-label="Primary navigation">
     {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
   </nav>

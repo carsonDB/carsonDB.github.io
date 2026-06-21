@@ -9,7 +9,7 @@ const blog = defineCollection({
     updated: z.coerce.date().optional(),
     tags: z.array(z.string()).default([]),
     series: z
-      .enum(["cogcore", "legacy", "neuron-research", "notes"])
+      .enum(["cogcore", "slide", "legacy", "neuron-research", "notes"])
       .default("notes"),
     seriesOrder: z.number().int().positive().optional(),
     legacy: z.boolean().default(false),

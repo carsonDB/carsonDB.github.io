@@ -1,7 +1,8 @@
-# CarsonDB GitHub Pages
+# Carson Wu — Personal Blog
 
-This repository is now an Astro-powered personal technical blog. It is prepared
-for writing Markdown posts that promote and explain the open-source CogCore repo.
+This repository contains Carson Wu's Astro-powered personal blog at
+`carsonDB.github.io`, with writing on AI, software, research, and other ideas in
+progress.
 
 ## Development
 
