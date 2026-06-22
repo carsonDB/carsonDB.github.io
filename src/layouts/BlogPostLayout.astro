@@ -26,3 +26,48 @@ const formattedDate = entry.data.date.toLocaleDateString("en", {
     </div>
   </article>
 </BaseLayout>
+
+<script>
+  const renderMermaid = async () => {
+    const diagrams = Array.from(
+      document.querySelectorAll<HTMLElement>('pre[data-language="mermaid"]'),
+    );
+
+    if (diagrams.length === 0) return;
+
+    const { default: mermaid } = await import("mermaid");
+
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: "base",
+      securityLevel: "strict",
+      themeVariables: {
+        background: "#f8f5ee",
+        primaryColor: "#e8f0fb",
+        primaryBorderColor: "#2563a7",
+        primaryTextColor: "#1f2933",
+        secondaryColor: "#fff0df",
+        secondaryBorderColor: "#c76b16",
+        tertiaryColor: "#f2efe7",
+        lineColor: "#59636e",
+        fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif",
+      },
+      flowchart: {
+        curve: "basis",
+        htmlLabels: false,
+      },
+    });
+
+    const nodes = diagrams.map((pre) => {
+      const container = document.createElement("div");
+      container.className = "mermaid";
+      container.textContent = pre.textContent ?? "";
+      pre.replaceWith(container);
+      return container;
+    });
+
+    await mermaid.run({ nodes });
+  };
+
+  void renderMermaid();
+</script>

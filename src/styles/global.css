@@ -395,6 +395,31 @@ nav a:hover {
   padding: 8px 10px;
 }
 
+.prose .mermaid {
+  margin: 1.75rem 0;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8f5ee;
+  padding: 18px;
+  text-align: center;
+}
+
+.prose .mermaid svg {
+  display: block;
+  width: 100%;
+  min-width: 620px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.prose .architecture-diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.75rem 0;
+}
+
 @media (max-width: 700px) {
   .site-header,
   .site-footer,

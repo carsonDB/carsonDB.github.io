@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">API-native control architecture</title>
+  <desc id="desc">Library components are blue. Application-owned components are orange. A request passes through chat and code agents to generated JavaScript and a guarded runtime, which applies validated application changes.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#59636e"/>
+    </marker>
+    <style>
+      .label{font:600 23px Inter,Arial,sans-serif;fill:#17202a;text-anchor:middle}
+      .small{font:500 18px Inter,Arial,sans-serif;fill:#25313d;text-anchor:middle}
+      .legend{font:500 18px Inter,Arial,sans-serif;fill:#25313d;text-anchor:start}
+      .blue{fill:#e8f0fb;stroke:#2563a7;stroke-width:3}
+      .orange{fill:#fff0df;stroke:#c76b16;stroke-width:3}
+      .neutral{fill:#f2efe7;stroke:#69737d;stroke-width:3}
+      .line{fill:none;stroke:#59636e;stroke-width:3;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect width="1200" height="680" rx="20" fill="#f8f5ee"/>
+
+  <rect class="neutral" x="55" y="55" width="230" height="78" rx="14"/>
+  <text class="label" x="170" y="103">User request</text>
+
+  <rect class="blue" x="355" y="55" width="230" height="78" rx="14"/>
+  <text class="label" x="470" y="103">Chat agent</text>
+
+  <rect class="blue" x="355" y="185" width="230" height="78" rx="14"/>
+  <text class="label" x="470" y="233">Code agent</text>
+
+  <rect class="neutral" x="330" y="315" width="280" height="78" rx="14"/>
+  <text class="label" x="470" y="363">Generated JavaScript</text>
+
+  <rect class="blue" x="355" y="445" width="230" height="78" rx="14"/>
+  <text class="label" x="470" y="493">Guarded runtime</text>
+
+  <rect class="orange" x="320" y="575" width="300" height="78" rx="14"/>
+  <text class="label" x="470" y="623">Validated app changes</text>
+
+  <rect class="blue" x="715" y="185" width="210" height="78" rx="14"/>
+  <text class="label" x="820" y="233">API retrieval</text>
+
+  <rect class="blue" x="715" y="315" width="210" height="78" rx="14"/>
+  <text class="label" x="820" y="363">API manual</text>
+
+  <rect class="orange" x="950" y="315" width="205" height="78" rx="14"/>
+  <text class="small" x="1052" y="348">TypeScript</text>
+  <text class="small" x="1052" y="373">application API</text>
+
+  <path class="line" d="M285 94 H345"/>
+  <path class="line" d="M470 133 V175"/>
+  <path class="line" d="M470 263 V305"/>
+  <path class="line" d="M470 393 V435"/>
+  <path class="line" d="M470 523 V565"/>
+  <path class="line" d="M585 224 H705"/>
+  <path class="line" d="M705 245 H595"/>
+  <path class="line" d="M820 263 V305"/>
+  <path class="line" d="M820 305 V273"/>
+  <path class="line" d="M950 354 H935"/>
+  <path class="line" d="M1010 393 C910 455 760 485 595 485"/>
+
+  <rect class="blue" x="55" y="555" width="34" height="34" rx="6"/>
+  <a href="https://github.com/carsonDB/CogCore" target="_blank" rel="noopener noreferrer">
+    <text class="legend" x="105" y="580">CogCore library</text>
+  </a>
+  <rect class="orange" x="55" y="605" width="34" height="34" rx="6"/>
+  <text class="legend" x="105" y="630">Application-owned code</text>
+</svg>
