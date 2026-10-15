@@ -1,9 +1,12 @@
 ---
+import { formatPostStats, getPostStats } from "../lib/postStats";
+
 const { post, index } = Astro.props;
 const formattedDate = post.data.date.toLocaleDateString("en", {
   year: "numeric",
   month: "long",
 });
+const stats = formatPostStats(getPostStats(post.body));
 ---
 
 <article class="post-row">
@@ -13,12 +16,14 @@ const formattedDate = post.data.date.toLocaleDateString("en", {
   <div class="post-summary">
     <div class="post-meta">
       <time datetime={post.data.date.toISOString()}>{formattedDate}</time>
+      <span>{stats.wordCount}</span>
+      <span>{stats.readingTime}</span>
       {post.data.tags.slice(0, 2).map((tag) => <span>{tag}</span>)}
     </div>
     <h3><a href={`/blog/${post.slug}/`}>{post.data.title}</a></h3>
     {post.data.description && <p>{post.data.description}</p>}
   </div>
   <a class="post-arrow" href={`/blog/${post.slug}/`} aria-label={`Read ${post.data.title}`}>
-    →
+    &rarr;
   </a>
 </article>
